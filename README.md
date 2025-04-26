@@ -55,7 +55,7 @@ You must first run MinIO using Docker Compose or any container engine exposing p
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:georgeroumieh-pon/s3-client.git
+git clone git@github.com:George-Roumieh/s3-client.git
 cd s3-client
 ```
 
