@@ -115,8 +115,8 @@ func UploadFiles(log *zap.Logger, ctx context.Context, s3Client *s3.Client, buck
 	return combinedErr
 }
 
-// Downloads a file from S3 and saves it to ./download/<objectName>
-func DownloadFile(log *zap.Logger, s3Client *s3.Client, bucketName string, filesToDownload []string) error {
+// Downloads files from S3 and saves it to ./download/<objectName>
+func DownloadFiles(log *zap.Logger, s3Client *s3.Client, bucketName string, filesToDownload []string) error {
 	ctx := context.TODO()
 
 	for _, objectKey := range filesToDownload {
