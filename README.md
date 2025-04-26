@@ -66,6 +66,7 @@ Before running, export the required MinIO credentials:
 ```bash
 export ACCESS_KEY=<access_key>
 export SECRET_KEY=<secret_key>
+export MINIO_URL=<minio_url>
 ```
 
 ### 3. Create Folders
