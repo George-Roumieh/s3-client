@@ -44,7 +44,8 @@ You must first run MinIO using Docker Compose or any container engine exposing p
 │   └── storage
 │       ├── bucket.go
 │       ├── file.go
-│       └── utils.go
+│       ├── utils.go
+|       └── utils_test.go
 └── README.md
 ```
 
@@ -89,5 +90,3 @@ This will:
 - Enable versioning
 - Upload all files from the `files/` folder
 - Download a list of predefined files into `downloads/`
-# s3-client
-# s3-client
