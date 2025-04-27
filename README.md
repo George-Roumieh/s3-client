@@ -25,7 +25,7 @@ This Go application provides a complete S3-compatible client to upload and downl
 This Go client connects to a **MinIO server running locally**, accessible at:  
 **http://localhost:9001**
 
-You must first run MinIO using Docker Compose or any container engine exposing port `9000` for API and `9001` for console UI.
+You must first run MinIO using Docker Compose or any container engine exposing port `9000` for API and `9001` for console UI [minio](https://github.com/George-Roumieh/minio).
 
 
 
