@@ -21,20 +21,20 @@ func main() {
 		return
 	}
 	// Create a new bucket
-	bucketName, err := storage.CreateBucket(log, s3Client.Ctx, s3Client.Client)
+	_, err = storage.CreateBucket(log, s3Client.Ctx, s3Client.Client)
 	if err != nil {
 		log.Sugar().Error(err)
 		return
 	}
 	// Upload files to the bucket
-	err = storage.UploadFiles(log, s3Client.Ctx, s3Client.Client, bucketName)
-	if err != nil {
-		log.Sugar().Error(err)
-	}
-	filesToDownload := []string{"file1.json", "file2.json", "file3.json"}
+	// err = storage.UploadFiles(log, s3Client.Ctx, s3Client.Client, bucketName)
+	// if err != nil {
+	// 	log.Sugar().Error(err)
+	// }
+	// filesToDownload := []string{"file1.json", "file2.json", "file3.json"}
 	// Download a file from the bucket
-	err = storage.DownloadFiles(log, s3Client.Client, bucketName, filesToDownload)
-	if err != nil {
-		log.Sugar().Error(err)
-	}
+	// err = storage.DownloadFiles(log, s3Client.Client, bucketName, filesToDownload)
+	// if err != nil {
+	// 	log.Sugar().Error(err)
+	// }
 }

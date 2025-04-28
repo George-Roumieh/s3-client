@@ -14,7 +14,7 @@ const (
 	minioUrlEnv  string = "MINIO_URL"
 	accessKeyEnv string = "ACCESS_KEY"
 	secretKeyEnv string = "SECRET_KEY"
-	region       string = "eu-west-4"
+	region       string = "eu-west-3"
 )
 
 // S3Client wraps the S3 client and context
