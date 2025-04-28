@@ -78,7 +78,7 @@ mkdir files downloads
 ```
 
 - Place at least 5 files (≥10MB) in the `files/` folder
-- Downloaded files will be saved into the `downloads/` folder
+- Downloaded files will be saved into the `downloads/` folder, to download specific files, update the filesToDownload array in the main package with the desired object names.
 
 ### 4. Run the App
 
