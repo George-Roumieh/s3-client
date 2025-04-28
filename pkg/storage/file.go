@@ -17,8 +17,8 @@ const (
 	minFileSizeMB      = 10
 	minFileSizeBytes   = minFileSizeMB * 1024 * 1024 // 10 MB
 	maxBucketSizeBytes = 1 * 1024 * 1024 * 1024      // 1 GB
-	filesFolderPath    = "../files"
-	downloadFolderPath = "../downloads"
+	filesFolderPath    = "files"
+	downloadFolderPath = "downloads"
 )
 
 // UploadFiles uploads files from the local folder "files" to the S3 bucket.
@@ -75,7 +75,6 @@ func UploadFiles(log *zap.Logger, ctx context.Context, s3Client *s3.Client, buck
 			}
 
 			mu.Lock()
-
 			objectKey := filepath.Base(filePath)
 			bucketSizeAfterUpload := currentSize + stat.Size()
 
@@ -104,6 +103,7 @@ func UploadFiles(log *zap.Logger, ctx context.Context, s3Client *s3.Client, buck
 	}
 
 	wg.Wait()
+
 	close(errChan)
 
 	// Check for errors in the error channel
